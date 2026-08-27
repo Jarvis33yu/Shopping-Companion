@@ -2,7 +2,7 @@
 
 Official implementation of **Shopping Companion: Benchmarking and Training LLM Agents for Long-Horizon Preference-Grounded E-Commerce Tasks**.
 
-This initial code release contains the benchmark construction and evaluation pipeline, agent implementations, tool servers, and the agentic reinforcement-learning components. The benchmark data is not included in this release and will be published separately.
+This release contains the benchmark construction and evaluation pipeline, agent implementations, tool servers, and the agentic reinforcement-learning components. The dataset is available on the [Hugging Face Hub](https://huggingface.co/datasets/yuzhan2205/Shopping-companion).
 
 ## Repository layout
 
@@ -37,7 +37,11 @@ Do not commit credentials or private endpoint configuration to the repository.
 
 ## Data and indexes
 
-Data files are expected under `data/`, which is excluded from version control. The public benchmark data and its exact preparation instructions will be added separately.
+The Shopping Companion dataset is hosted at:
+
+> [yuzhan2205/Shopping-companion](https://huggingface.co/datasets/yuzhan2205/Shopping-companion)
+
+Download the required files into `data/`, which is excluded from version control. Detailed preparation instructions and additional dataset artifacts will be documented in the dataset card as they are released.
 
 To build the memory index after placing the conversation JSONL file at the path expected by the script:
 
