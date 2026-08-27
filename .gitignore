@@ -1,0 +1,16 @@
+data/
+logs/
+*.pyc
+__pycache__/
+.venv/
+.env
+*.log
+checkpoints/
+preprocessed_data/
+mlruns/
+wandb/
+agentic_rl/verl/
+verl/
+TuningFactory/
+output/
+ROLL/

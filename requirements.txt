@@ -1,0 +1,15 @@
+ujson
+pydantic
+sentence-transformers
+openai
+tqdm
+pyserini
+Flask
+waitress
+portalocker
+nltk
+crawl4ai
+common_io @ https://pai-dlc.oss-cn-zhangjiakou.aliyuncs.com/tunnel/common_io/common_io-0.4.1%2Btunnel-py2.py3-none-any.whl
+tiktoken
+matplotlib
+requests

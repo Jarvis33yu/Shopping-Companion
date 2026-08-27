@@ -1,0 +1,108 @@
+tools:
+  - class_name: "agentic_tools.ProductSearch"
+    config:
+      type: native
+      timeout: 60
+    tool_schema:
+      type: "function"
+      function:
+        name: "product_search"
+        description: "Given a query and search for up to 50 relevant products. Optionally filter results by shop ID or price range."
+        parameters:
+          type: "object"
+          properties:
+            query:
+              type: "string"
+              description: "Keywords or phrase describing the desired product."
+            shop_id:
+              type: "string"
+              description: "Restrict search to a specific shop using its unique Shop ID."
+            price:
+              type: "string"
+              description: "Filter products by price range in the format 'min-max' (e.g., '0-100') or 'min-'' for no upper bound (e.g., '1000-'')."
+          required: ["query"]
+
+  - class_name: "agentic_tools.ProductView"
+    config:
+      type: native
+      timeout: 60
+    tool_schema:
+      type: "function"
+      function:
+        name: "product_view"
+        description: "Given an array of product IDs, retrieve the relevant details (attributes, options) for each product."
+        parameters:
+          type: "object"
+          properties:
+            product_ids:
+              type: "array"
+              items: {"type": "string", "description": "The product ID."}
+              minItems: 1
+              description: "An array of product IDs."
+          required: ["product_ids"]
+                  
+  - class_name: "agentic_tools.MemSearch"
+    config:
+      type: native
+      timeout: 60
+    tool_schema:
+      type: "function"
+      function:
+        name: "mem_search"
+        description: "Batch search for dialogue memories (conversation turns) based on a array of queries; the tool retrieves the top 10 results for each query in one call."
+        parameters:
+          type: "object"
+          properties:
+            queries:
+              type: "array"
+              items: {"type": "string", "description": "The search query."}
+              minItems: 1
+              description: "Array of query strings."
+          required: ["queries"]
+
+  - class_name: "agentic_tools.MemView"
+    config:
+      type: native
+      timeout: 60
+    tool_schema:
+      type: "function"
+      function:
+        name: "mem_view"
+        description: "Given an array of memory indices, retrieve the dialogue session containing that memory."
+        parameters:
+          type: "object"
+          properties:
+            indices:
+              type: "array"
+              items: {"type": "integer", "description": "The index of the memory."}
+              minItems: 1
+              description: "An array of memory indices."
+          required: ["indices"]
+
+  - class_name: "agentic_tools.MemSummarizeByDate"
+    config:
+      type: native
+      timeout: 60
+    tool_schema:
+      type: "function"
+      function:
+        name: "mem_summarize_by_date"
+        description: "Given a %Y-%m-%d formatted start date, summarize sessions within the following offset days according to the specified goal."
+        parameters:
+          type: "object"
+          properties:
+            start_date:
+              type: "string"
+              description: "The beginning date of the range."
+            offset:
+              type: "integer"
+              description: "The number of days to include after the start date."
+              minimum: 1
+              maximum: 30
+            goal:
+              type: "string"
+              description: "The goal of the summary."
+          required: ["start_date", "offset", "goal"]
+
+  
+
