@@ -49,11 +49,13 @@ To build the memory index after placing the conversation JSONL file at the path 
 bash run_mem_preprocess.sh
 ```
 
-Product preprocessing supports an ODPS source through `src/build_product_docs.py`. Provide the table explicitly rather than storing an internal table name in the repository:
+After downloading the product catalog as `data/products.jsonl`, build and start the local product index with:
 
 ```bash
-ODPS_TABLE='project.table/partition_spec' bash run_product_preprocess.sh
+bash run_product_preprocess.sh
 ```
+
+If the catalog is stored elsewhere, set `PRODUCTS_FILE=/path/to/products.jsonl`.
 
 ## Running agents and evaluation
 

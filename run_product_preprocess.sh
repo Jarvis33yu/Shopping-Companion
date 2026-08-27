@@ -2,16 +2,21 @@
 
 resources_dir="data/product_resources"
 indexes_dir="data/product_indexes"
-odps_table="${ODPS_TABLE:?Set ODPS_TABLE to the product source table and partition}"
-products_file="data/products.jsonl"
+products_file="${PRODUCTS_FILE:-data/products.jsonl}"
 docs_file="${resources_dir}/docs.jsonl"
+
+if [ ! -f "${products_file}" ]; then
+    echo "Product data not found: ${products_file}"
+    echo "Download it from https://huggingface.co/datasets/yuzhan2205/Shopping-companion"
+    exit 1
+fi
 
 mkdir -p logs ${resources_dir} ${indexes_dir}
 rm -rf ${resources_dir}/*
 rm -rf ${indexes_dir}/*
 
-# 1. build product docs
-python src/build_product_docs.py --tasks download,convert --odps_table ${odps_table} --products_file ${products_file} --docs_file ${docs_file}
+# 1. convert the downloaded product data into Pyserini documents
+python src/build_product_docs.py --products_file ${products_file} --docs_file ${docs_file}
 if [ $? -eq 0 ]; then
     echo "build product docs success"
 else
