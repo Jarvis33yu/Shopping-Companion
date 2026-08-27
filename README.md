@@ -84,8 +84,21 @@ bash run_grpo.sh
 
 ## Citation
 
-Citation information will be added with the camera-ready publication metadata.
+If you use Shopping Companion in your research, please cite:
+
+```bibtex
+@misc{yu2026shoppingcompanion,
+  title         = {Shopping Companion: Benchmarking and Training LLM Agents for Long-Horizon Preference-Grounded E-Commerce Tasks},
+  author        = {Yu, Zijian and Xiao, Kejun and Zhao, Huaipeng and Luo, Tao and Zeng, Xiaoyi},
+  year          = {2026},
+  url           = {https://github.com/Jarvis33yu/Shopping-Companion}
+}
+```
+
+GitHub also exposes the same metadata through the repository's **Cite this repository** menu, powered by [`CITATION.cff`](CITATION.cff). Publication identifiers will be added after the paper is published.
 
 ## License
 
-License information will be added before the final public release.
+The source code in this repository is released under the [Apache License 2.0](LICENSE).
+
+The Shopping Companion dataset and any third-party resources are not covered by this repository's code license. Refer to the [dataset card](https://huggingface.co/datasets/yuzhan2205/Shopping-companion) and the respective upstream projects for their terms.

@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this software or benchmark in your research, please cite it using the metadata below."
+title: "Shopping Companion: Benchmarking and Training LLM Agents for Long-Horizon Preference-Grounded E-Commerce Tasks"
+type: software
+authors:
+  - family-names: Yu
+    given-names: Zijian
+  - family-names: Xiao
+    given-names: Kejun
+  - family-names: Zhao
+    given-names: Huaipeng
+  - family-names: Luo
+    given-names: Tao
+  - family-names: Zeng
+    given-names: Xiaoyi
+url: "https://github.com/Jarvis33yu/Shopping-Companion"
+repository-code: "https://github.com/Jarvis33yu/Shopping-Companion"
+license: Apache-2.0
+keywords:
+  - large language model agents
+  - e-commerce
+  - long-term memory
+  - reinforcement learning
+  - benchmark
+preferred-citation:
+  type: generic
+  title: "Shopping Companion: Benchmarking and Training LLM Agents for Long-Horizon Preference-Grounded E-Commerce Tasks"
+  authors:
+    - family-names: Yu
+      given-names: Zijian
+    - family-names: Xiao
+      given-names: Kejun
+    - family-names: Zhao
+      given-names: Huaipeng
+    - family-names: Luo
+      given-names: Tao
+    - family-names: Zeng
+      given-names: Xiaoyi
+  year: 2026
+  url: "https://github.com/Jarvis33yu/Shopping-Companion"
