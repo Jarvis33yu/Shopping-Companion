@@ -95,7 +95,7 @@ If you use Shopping Companion in your research, please cite:
 }
 ```
 
-GitHub also exposes the same metadata through the repository's **Cite this repository** menu, powered by [`CITATION.cff`](CITATION.cff). Publication identifiers will be added after the paper is published.
+Publication identifiers will be added after the paper is published.
 
 ## License
 
